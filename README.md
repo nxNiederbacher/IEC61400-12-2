@@ -20,8 +20,8 @@ This is a first step development, the proposed steps to follow are:
 3. Start with small initiative  
   
 <br><br>
-<img src="./img/Nordex_logo.png" width="200" height="200" />
-<img src="./img/Vattenfall_logo.png" width="200" height="200" />
+<img src="./img/Nordex_logo.png" width="200" height="50" />
+<img src="./img/Vattenfall_logo.png" width="200" height="50" />
 
 
 **Contact(s)**:  
