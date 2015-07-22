@@ -1,0 +1,21 @@
+---
+title: "Steps to follow"
+output: html_document
+---
+
+**Objective**: Create an R package implementing methods of IEC61400-12-2  
+
+Steps:  
+
+1. Find example data sets to work with.
+    + Look at the PCWG example data sets
+2. Create a set of functions to generate random data of interest of a wind site  
+    + Define relevant tags (wind speed, power, etc.)  
+    + WTG level or site level?  
+3. Share existing functions implemented in R. 
+4. Have a look to Carlos (Nordex) previous analysis.  
+
+
+**To Do**:  
+- Clean colnames & format properly the columns at the PCWG dataset  
+- Create code book file for the data set  
