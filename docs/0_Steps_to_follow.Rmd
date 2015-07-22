@@ -1,9 +1,7 @@
----
-title: "Steps to follow"
-output: html_document
----
+# Steps to follow  
 
-**Objective**: Create an R package implementing methods of IEC61400-12-2  
+**Objective**:  
+Create an R package implementing methods of IEC61400-12-2  
 
 Steps:  
 
@@ -17,5 +15,6 @@ Steps:
 
 
 **To Do**:  
+- After adding 2 functions, give the repository a package structure.  
 - Clean colnames & format properly the columns at the PCWG dataset  
 - Create code book file for the data set  
