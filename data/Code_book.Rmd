@@ -1,0 +1,50 @@
+# Code book
+This is the code book for the data sets present at the repo. It will be completed as more data sets are added.  
+
+
+## PCWG data set
+This data set is part of the repository for the [Power Curve Working Group](https://github.com/peterdougstuart/PCWG) repo on GitHub.  
+Contains 30 variables and 11.006 observations, beeing the first one a time stamp, hence a time series.  
+
+The specific conditions about how the data set was collected are unkown and will be refere to the [PCWG](http://www.pcwg.org) group. 
+
+#### Cleaning code  
+The raw data copy from the PCWG example data set is not formated 
+This is the code to name it accordingly and format the columns.
+```{r pcwg_cleaning, eval=FALSE}
+load("./data/PCWG_dataset.RDat")
+library(dplyr)
+
+# Check the actual formating 
+str(pcwg)
+
+## Fix ColNames
+names(pcwg) <- 
+pcwg %>% colnames %>%  
+  gsub(pattern="*\\.", replacement="_") %>% 
+  gsub(pattern="*\\___", replacement="_") 
+  
+## Fix time format
+format <- "%m/%d/%Y %H:%M"
+pcwg$Date_Time_Stamp <- 
+  pcwg$Date_Time_Stamp %>% 
+  as.character %>% 
+  lubridate::fast_strptime(., format = format)
+
+## Turbine_Intensity as numeric & decimal
+pcwg$Mast_96_0m_Turbulence_Intensity <- 
+pcwg$Mast_96_0m_Turbulence_Intensity %>% 
+as.character %>% 
+gsub(pattern="%", replacement="") %>% 
+as.numeric
+
+pcwg$Mast_96_0m_Turbulence_Intensity <- 
+  pcwg$Mast_96_0m_Turbulence_Intensity / 100
+
+str(pcwg)
+
+# Save the clean dataset
+# save("pcwg", file = "./data/PCWG_dataset.RDat")
+
+```
+
