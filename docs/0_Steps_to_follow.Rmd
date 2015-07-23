@@ -16,5 +16,5 @@ Steps:
 
 **To Do**:  
 - After adding 2 functions, give the repository a package structure.  
-- Clean colnames & format properly the columns at the PCWG dataset  
-- Create code book file for the data set  
+- ~~Clean colnames & format properly the columns at the PCWG dataset~~  
+- ~~Create code book file for the data sets~~  
